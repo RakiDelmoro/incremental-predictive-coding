@@ -100,7 +100,7 @@ def update_prior_activations(activations, activations_error, parameters, lr):
         activations[-(layer_idx+2)] += lr * (current_error + backprop_term)
 
 def update_parameters(activations, activations_error, parameters, m, v, lr, t):
-    # AdamW optimizer
+    # AdamW Optimizer
     beta1 = 0.9
     beta2 = 0.999
     epsilon = 1e-8
