@@ -12,7 +12,7 @@ http://yann.lecun.com/exdb/mnist/
 ## Handwriting Digit Recognition
 #### Model takes 28x28 input image and it will predict wether the image is digit 0-9
 
-## For comparison I train a Neural Network with two different Training Algorithm IPC vs Backpropagation
+### For comparison I train a Neural Network with two different Training Algorithm IPC vs Backpropagation
 
 ### After training for 20 epochs/iterations:
 
