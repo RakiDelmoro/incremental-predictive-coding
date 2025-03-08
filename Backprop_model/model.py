@@ -68,7 +68,7 @@ def calculate_gradients(network_activations, expected_output, parameters):
     return loss, activations_errors
 
 def update_parameters(activations, activations_error, parameters, lr, m, v, t):
-    # TODO: Make this function more readable
+    # AdamW Optimizer
     beta1 = 0.9
     beta2 = 0.999
     epsilon = 1e-8
@@ -105,7 +105,7 @@ def update_parameters(activations, activations_error, parameters, lr, m, v, t):
         v_hat_bias = v_bias / (1 - beta2**t)
 
         # Update weights with AdamW (include weight decay)
-        weights -= lr * (m_hat_weights / (np.sqrt(v_hat_weights) + epsilon)) #+ weight_decay * weights)
+        weights -= lr * (m_hat_weights / (np.sqrt(v_hat_weights) + epsilon))
         weights -= lr * (weight_decay * weights)
  
         # Update bias with Adam (no weight decay)
