@@ -6,9 +6,9 @@ from utils import image_data_batching
 def ipc_model_runner():
     IMAGE_HEIGHT = 28
     IMAGE_WIDTH = 28
+    NUM_ITERATIONS = 8
     PARAMS_LR = 0.0001
     ACTIVATION_LR = 0.1
-    NUM_ITERATIONS = 8
 
     with gzip.open('./Mnist_dataset/mnist.pkl.gz', 'rb') as f: ((train_images, train_labels), (test_images, test_labels), _) = pickle.load(f, encoding='latin1')
     assert train_images.shape[0] == train_labels.shape[0]
